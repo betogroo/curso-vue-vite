@@ -1,26 +1,13 @@
 <template>
-  <v-app>
-    <v-main>
-      <HomeView />
-    </v-main>
-  </v-app>
+  <div>
+    <div class="text-center">
+      <router-link :to="{ name: 'HomeView' }">Home</router-link> |
+      <router-link :to="{ name: 'AboutView' }">About</router-link>
+    </div>
+    <router-view />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HomeView from './views/HomeView.vue'
+<script setup lang="ts"></script>
 
-export default defineComponent({
-  name: 'App',
-
-  components: {
-    HomeView
-  },
-
-  data() {
-    return {
-      //
-    }
-  }
-})
-</script>
+<style scoped></style>
