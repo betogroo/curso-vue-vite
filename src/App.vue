@@ -1,9 +1,18 @@
 <template>
   <v-app>
     <v-navigation-drawer permanent>
-      <v-list>
-        <v-list-item :to="{ name: 'HomeView' }"> Home </v-list-item>
-        <v-list-item :to="{ name: 'AboutView' }"> About </v-list-item>
+      <v-list nav density="compact">
+        <v-list-item
+          title="Home"
+          prepend-icon="mdi-home"
+          :to="{ name: 'HomeView' }"
+        />
+        <v-list-item
+          title="About"
+          prepend-icon="mdi-information"
+          prefix="Coiso"
+          :to="{ name: 'AboutView' }"
+        />
       </v-list>
     </v-navigation-drawer>
     <v-main>
