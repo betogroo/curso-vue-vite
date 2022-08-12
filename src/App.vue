@@ -1,14 +1,10 @@
 <template>
   <v-app>
     <v-navigation-drawer permanent>
-      <ul>
-        <li>
-          <router-link :to="{ name: 'HomeView' }">Home</router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'AboutView' }">About</router-link>
-        </li>
-      </ul>
+      <v-list>
+        <v-list-item :to="{ name: 'HomeView' }"> Home </v-list-item>
+        <v-list-item :to="{ name: 'AboutView' }"> About </v-list-item>
+      </v-list>
     </v-navigation-drawer>
     <v-main>
       <v-container>
