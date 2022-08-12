@@ -1,9 +1,15 @@
 <template>
   <v-app>
-    <div class="text-center">
-      <router-link :to="{ name: 'HomeView' }">Home</router-link> |
-      <router-link :to="{ name: 'AboutView' }">About</router-link>
-    </div>
+    <v-navigation-drawer permanent>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'HomeView' }">Home</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'AboutView' }">About</router-link>
+        </li>
+      </ul>
+    </v-navigation-drawer>
     <v-main>
       <v-container>
         <router-view />
