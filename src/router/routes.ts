@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import CounterView from '../views/CounterView.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -13,6 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'AboutView',
     component: AboutView
+  },
+  {
+    path: '/counter',
+    name: 'CounterView',
+    component: CounterView
   },
   {
     path: '/:catchAll(.*)',
