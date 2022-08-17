@@ -28,7 +28,7 @@ const items = ref<DrawerItems[]>([
 ])
 </script>
 <template>
-  <v-app>
+  <v-app class="bg-indigo-lighten-5">
     <v-navigation-drawer v-model="drawer">
       <v-list nav density="compact">
         <v-list-item
@@ -42,7 +42,11 @@ const items = ref<DrawerItems[]>([
     </v-navigation-drawer>
     <v-app-bar density="compact">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Vue App</v-app-bar-title>
+      <v-app-bar-title>
+        <v-btn :to="{ name: 'HomeView' }" :ripple="false" variant="plain"
+          >Vue App</v-btn
+        >
+      </v-app-bar-title>
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
