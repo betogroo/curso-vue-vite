@@ -7,6 +7,8 @@ interface DrawerItems {
   icon: string
 }
 
+const drawer = ref<boolean>(true)
+
 const items = ref<DrawerItems[]>([
   {
     name: 'HomeView',
@@ -27,7 +29,7 @@ const items = ref<DrawerItems[]>([
 </script>
 <template>
   <v-app>
-    <v-navigation-drawer permanent>
+    <v-navigation-drawer v-model="drawer">
       <v-list nav density="compact">
         <v-list-item
           v-for="item in items"
@@ -38,6 +40,13 @@ const items = ref<DrawerItems[]>([
         />
       </v-list>
     </v-navigation-drawer>
+    <v-app-bar density="compact">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-title>Vue App</v-app-bar-title>
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
     <v-main>
       <v-container>
         <router-view />
