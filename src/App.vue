@@ -28,7 +28,7 @@ const items = ref<DrawerItems[]>([
 ])
 </script>
 <template>
-  <v-app>
+  <v-app class="bg-indigo-lighten-5">
     <v-navigation-drawer v-model="drawer">
       <v-list nav density="compact">
         <v-list-item
