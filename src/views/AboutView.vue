@@ -4,14 +4,14 @@
       <v-col cols="12">
         <v-card>
           <template v-slot:prepend>
-            <v-avatar size="x-large" color="yellow">
-              <span class="text-h3">JS</span>
+            <v-avatar size="x-large" color="#224F66">
+              <v-icon icon="mdi-vuejs" color="green" size="50" />
             </v-avatar>
           </template>
           <template v-slot:title>
-            <span class="text-h4">Vue App About</span>
+            <span class="text-h4 font-weight-bold">Vue App About</span>
           </template>
-          <template v-slot:subtitle> @jsprogramers</template>
+          <template v-slot:subtitle> @aprendavue</template>
           <v-card-item
             title="Versão"
             subtitle="1.0.6"
@@ -45,8 +45,8 @@
         <v-card>
           <v-card-title>Empresa</v-card-title>
           <v-card-item
-            subtitle="Especialistas em Javascript"
-            title="JS Programers "
+            title="Aprenda Vue"
+            subtitle="Aprenda Vue"
             prepend-icon="mdi-domain"
           ></v-card-item>
           <v-card-item
